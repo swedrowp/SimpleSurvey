@@ -17,6 +17,7 @@
 		B12F10DD1F5443C200D72E07 /* WindowsAzureMobileServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B12F10DB1F5443C200D72E07 /* WindowsAzureMobileServices.framework */; };
 		B12F10DE1F5443C200D72E07 /* WindowsAzureMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B12F10DC1F5443C200D72E07 /* WindowsAzureMessaging.framework */; };
 		B12F10E51F545E6E00D72E07 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B12F10E41F545E6E00D72E07 /* Images.xcassets */; };
+		B12FDA841F6123AB0095EBCB /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12FDA831F6123AB0095EBCB /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		B12F10DC1F5443C200D72E07 /* WindowsAzureMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindowsAzureMessaging.framework; sourceTree = "<group>"; };
 		B12F10E31F544BFF00D72E07 /* HubInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HubInfo.h; sourceTree = "<group>"; };
 		B12F10E41F545E6E00D72E07 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Simple Survey/Images.xcassets"; sourceTree = "<group>"; };
+		B12FDA821F6123AB0095EBCB /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		B12FDA831F6123AB0095EBCB /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		F3DFEBDDC617653F220DDB1C /* Pods-Simple Survey.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple Survey.release.xcconfig"; path = "Pods/Target Support Files/Pods-Simple Survey/Pods-Simple Survey.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +83,8 @@
 				306F170B1B30E44D0061D2DA /* AppDelegate.h */,
 				306F170C1B30E44D0061D2DA /* AppDelegate.m */,
 				306F170E1B30E44D0061D2DA /* ViewController.h */,
+				B12FDA821F6123AB0095EBCB /* TableViewController.h */,
+				B12FDA831F6123AB0095EBCB /* TableViewController.m */,
 				306F170F1B30E44D0061D2DA /* ViewController.m */,
 				306F172D1B30E4800061D2DA /* Main.storyboard */,
 				306F17161B30E44D0061D2DA /* LaunchScreen.xib */,
@@ -91,10 +96,10 @@
 		306F17071B30E44D0061D2DA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				306F17091B30E44D0061D2DA /* main.m */,
 				B12F10E31F544BFF00D72E07 /* HubInfo.h */,
 				B12F10D81F54242A00D72E07 /* GoogleService-Info.plist */,
 				306F17081B30E44D0061D2DA /* Info.plist */,
-				306F17091B30E44D0061D2DA /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 				306F17101B30E44D0061D2DA /* ViewController.m in Sources */,
 				306F170D1B30E44D0061D2DA /* AppDelegate.m in Sources */,
 				306F170A1B30E44D0061D2DA /* main.m in Sources */,
+				B12FDA841F6123AB0095EBCB /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
