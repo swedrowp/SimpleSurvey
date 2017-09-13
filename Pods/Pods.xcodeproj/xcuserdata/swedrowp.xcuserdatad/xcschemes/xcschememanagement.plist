@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-Simple Survey.xcscheme</key>
+		<key>Pods-surveysList.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>943F363F5978D8EF576DC1CE82D428A8</key>
+		<key>893F8B8FB0B9EB2AD3340E733B2B97C0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
