@@ -17,21 +17,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="xht-Ks-8HL">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="53"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter text to create a new item" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="NaP-pf-SjW">
-                                    <rect key="frame" x="14" y="12" width="311" height="30"/>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Survey Title" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="NaP-pf-SjW" userLabel="Title">
+                                    <rect key="frame" x="8" y="12" width="208" height="30"/>
                                     <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                     <connections>
                                         <outlet property="delegate" destination="PsD-7a-zsW" id="zH6-68-ShW"/>
                                     </connections>
                                 </textField>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJa-QB-RGg">
-                                    <rect key="frame" x="330" y="7" width="33" height="39"/>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Survey Hash" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZdO-ZE-ISA" userLabel="Hash">
+                                    <rect key="frame" x="224" y="12" width="99" height="30"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="33" id="h5a-e9-PGS"/>
+                                        <constraint firstAttribute="width" constant="99" id="wKN-Gt-sm3"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJa-QB-RGg">
+                                    <rect key="frame" x="331" y="7" width="44" height="39"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="44" id="h5a-e9-PGS"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                     <state key="normal" title="+">
@@ -44,19 +53,23 @@
                             </subviews>
                             <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstItem="qJa-QB-RGg" firstAttribute="leading" secondItem="NaP-pf-SjW" secondAttribute="trailing" constant="5" id="7UM-Sc-WeM"/>
-                                <constraint firstItem="NaP-pf-SjW" firstAttribute="centerY" secondItem="xht-Ks-8HL" secondAttribute="centerY" id="Mfk-f6-3Eq"/>
-                                <constraint firstAttribute="trailing" secondItem="qJa-QB-RGg" secondAttribute="trailing" constant="12" id="iPu-8y-5mb"/>
-                                <constraint firstItem="NaP-pf-SjW" firstAttribute="leading" secondItem="xht-Ks-8HL" secondAttribute="leading" constant="14" id="ovr-lR-gwx"/>
-                                <constraint firstItem="NaP-pf-SjW" firstAttribute="centerY" secondItem="qJa-QB-RGg" secondAttribute="centerY" constant="1" id="tuD-Qb-eRI"/>
+                                <constraint firstItem="ZdO-ZE-ISA" firstAttribute="top" secondItem="xht-Ks-8HL" secondAttribute="top" constant="12" id="Kkg-8W-6bU"/>
+                                <constraint firstAttribute="bottom" secondItem="NaP-pf-SjW" secondAttribute="bottom" constant="12" id="MDL-wd-jYp"/>
+                                <constraint firstItem="ZdO-ZE-ISA" firstAttribute="leading" secondItem="NaP-pf-SjW" secondAttribute="trailing" constant="8" id="Mmv-AW-3AG"/>
+                                <constraint firstItem="qJa-QB-RGg" firstAttribute="leading" secondItem="ZdO-ZE-ISA" secondAttribute="trailing" constant="8" id="SCX-a8-ih5"/>
+                                <constraint firstItem="NaP-pf-SjW" firstAttribute="leading" secondItem="xht-Ks-8HL" secondAttribute="leading" constant="8" id="a6n-x6-2Gy"/>
+                                <constraint firstAttribute="bottom" secondItem="ZdO-ZE-ISA" secondAttribute="bottom" constant="12" id="iKK-CX-QyJ"/>
+                                <constraint firstAttribute="trailing" secondItem="qJa-QB-RGg" secondAttribute="trailing" id="iPu-8y-5mb"/>
+                                <constraint firstItem="NaP-pf-SjW" firstAttribute="top" secondItem="xht-Ks-8HL" secondAttribute="top" constant="12" id="mtW-pL-hS9"/>
+                                <constraint firstItem="qJa-QB-RGg" firstAttribute="top" secondItem="xht-Ks-8HL" secondAttribute="top" constant="7" id="nh5-Qa-CN7"/>
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="ShM-8Z-sXJ">
-                                <rect key="frame" x="0.0" y="75" width="375" height="50"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="ShM-8Z-sXJ">
+                                <rect key="frame" x="0.0" y="76" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ShM-8Z-sXJ" id="xGq-Lx-MgI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -69,6 +82,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Azure Mobile Apps" id="izZ-yf-o0t"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="hNe-LF-0Sj">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <attributedString key="attributedTitle">
                             <fragment content="Syncing...">
@@ -80,12 +94,13 @@
                         </attributedString>
                     </refreshControl>
                     <connections>
-                        <outlet property="itemText" destination="NaP-pf-SjW" id="OJn-5H-he9"/>
+                        <outlet property="surveyHash" destination="ZdO-ZE-ISA" id="9ui-Fh-Wey"/>
+                        <outlet property="surveyTitle" destination="NaP-pf-SjW" id="XkH-FS-ibD"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rQM-X1-JbL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1053.75" y="158.75"/>
+            <point key="canvasLocation" x="1053.5999999999999" y="157.87106446776613"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0n8-is-8KE">

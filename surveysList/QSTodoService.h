@@ -35,6 +35,9 @@ typedef void (^QSCompletionBlock) ();
 - (void)addItem:(NSDictionary *)item
      completion:(QSCompletionBlock)completion;
 
+- (void)removeItem:(NSDictionary *)item
+     completion:(QSCompletionBlock)completion;
+
 - (void)completeItem:(NSDictionary *)item
           completion:(QSCompletionBlock)completion;
 

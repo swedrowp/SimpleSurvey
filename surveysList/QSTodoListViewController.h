@@ -14,13 +14,29 @@
 // limitations under the License.
 //
 
+#import "HubInfo.h"
 #import <UIKit/UIKit.h>
 #import "QSAppDelegate.h"
+ #import <CommonCrypto/CommonHMAC.h>
 #import <surveymonkey-ios-sdk/SurveyMonkeyiOSSDK/SurveyMonkeyiOSSDK.h>
 
-@interface QSTodoListViewController : UITableViewController<NSFetchedResultsControllerDelegate, SMFeedbackDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextField *itemText;
+@interface QSTodoListViewController : UITableViewController<UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate, SMFeedbackDelegate, UITextFieldDelegate, NSXMLParserDelegate>
+{
+    NSXMLParser *xmlParser;
+}
+
+
+@property (weak, nonatomic) IBOutlet UITextField *surveyTitle;
+@property (weak, nonatomic) IBOutlet UITextField *surveyHash;
+
+
+
+@property (copy, nonatomic) NSString *notificationMessage;
+@property (copy, nonatomic) NSString *surveyTitleNotification;
+@property (copy, nonatomic) NSString *surveyHashNotification;
+@property (copy, nonatomic) NSString *statusResult;
+@property (copy, nonatomic) NSString *currentElement;
 
 
 - (IBAction)onAdd:(id)sender;

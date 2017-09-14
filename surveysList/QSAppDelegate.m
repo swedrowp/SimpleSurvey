@@ -124,7 +124,8 @@
     
     NSLog(@"%@", userInfo);
     self.surveyHash = [[userInfo objectForKey:@"aps"] valueForKey:@"surveyHash"];
-    [self MessageBox:@"Notification" message:[[userInfo objectForKey:@"aps"] valueForKey:@"alert"]];
+    NSString *message = [[userInfo objectForKey:@"aps"] valueForKey:@"alert"];
+    [self MessageBox:@"New Survey" message:message];
 }
 
 
@@ -166,7 +167,7 @@
         return _persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"qstodoitem.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"qssurveys.sqlite"];
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
